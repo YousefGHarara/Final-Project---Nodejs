@@ -29,7 +29,7 @@ const add = (req, res, next) => {
     const total = result.data - expenseValue[0].value;
 
     if (total < 0) {
-      return next(createError(500, "Total isn't enigph 'Please add your money'"));
+      return next(createError(500, "Your balance isn't enough"));
     }
 
     const expense = new Expenses({

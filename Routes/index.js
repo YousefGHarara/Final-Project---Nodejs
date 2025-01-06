@@ -9,12 +9,6 @@ module.exports = (app) => {
     });
   });
 
-  app.get("/dashboard", (req, res, next) => {
-    res.json({
-      page: "dashboard",
-    });
-  });
-
   app.use("/auth", authRouter);
 
   app.use("/expenses", expensesRouter)
